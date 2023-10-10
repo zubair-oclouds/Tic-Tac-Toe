@@ -1,0 +1,261 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-image: radial-gradient(
+    circle,
+    #333b6b,
+    #333a64,
+    #32385e,
+    #323757,
+    #313551,
+    #313550,
+    #31344e,
+    #31344d,
+    #313550,
+    #323653,
+    #323657,
+    #32375a
+  );
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+
+.screen-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100vh;
+}
+
+.box1 {
+  margin: 10vh 0vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box1 div {
+  padding: 2rem;
+}
+
+.heading {
+  display: inline;
+  font-size: 60px;
+  text-align: center;
+}
+
+.description {
+  text-align: justify;
+}
+
+.start-button {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.7rem;
+  border-style: solid;
+  transition: all 0.8s;
+  &:active {
+    transform: scale(0.7);
+  }
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100vh;
+}
+
+.avatar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 10vh;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.avatar:last-child {
+  color: #cb2535;
+}
+
+.avatar img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 2px solid white;
+  margin-bottom: 10px;
+}
+
+#player2 {
+  border: 3px solid #8f2d36;
+}
+
+.game-board {
+  width: 90%;
+  height: 60%;
+  margin: 0 auto;
+  background-color: transparent;
+  color: #fff;
+  border: 6px solid #2c3e50;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 10px#4F547B;
+
+  display: grid;
+  grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+}
+
+.box {
+  border: 6px solid #696969;
+  border-radius: 2px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  /* z-index: 99;
+  opacity: 1; */
+  transition: opacity 1s ease;
+  padding-bottom: 200px;
+  display: none;
+}
+
+.modal_body {
+  background-image: radial-gradient(
+    circle,
+    #333b6b,
+    #333a64,
+    #32385e,
+    #323757,
+    #313551,
+    #313550,
+    #31344e,
+    #31344d,
+    #313550,
+    #323653,
+    #323657,
+    #32375a
+  );
+  margin: auto;
+  height: 400px;
+  width: 400px;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid white;
+  border-radius: 1em;
+  transition: all 1s ease;
+}
+
+.message {
+  font-size: 2em;
+}
+
+.reset_btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid aliceblue;
+  border-radius: 0.7em;
+  margin-top: 50px;
+  font-size: 1.5em;
+  padding: 0.5rem 1rem;
+  transition: all 0.8s;
+  &:active {
+    transform: scale(0.7);
+  }
+}
+
+.username-modal {
+  font-size: 1.5rem;
+  display: none;
+}
+
+form input {
+  outline: none;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.5rem 0.7rem;
+  border-radius: 1rem;
+  &::placeholder {
+    color: white;
+    opacity: 0.6;
+  }
+}
+
+input:last-child {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+@media screen and (max-width: 800px) {
+  .heading {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .box1 {
+    margin: 0;
+  }
+
+  .screen-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 4fr;
+  }
+
+  .heading,
+  .description {
+    display: none;
+  }
+
+  .game-container {
+    height: auto;
+  }
+
+  .avatar-container {
+    margin-bottom: 0vh;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

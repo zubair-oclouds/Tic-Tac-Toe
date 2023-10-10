@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <div class="screen-grid-container">
+      <div class="box1">
+        <div class="heading"><span>Let's Play the Tic-tac-toe Game!</span></div>
+        <div class="description">
+          <span
+            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis,
+            voluptate praesentium minus reiciendis ad, possimus vitae
+            voluptatem, quis perspiciatis aliquam sit! Ducimus ea sunt cumque
+            aut culpa corporis dolor id nobis numquam omnis voluptatum repellat
+            eius voluptatibus veritatis, ab laudantium, distinctio libero itaque
+            accusamus est?</span
+          >
+        </div>
+        <div class="button">
+          <button class="start-button">Start a new Game</button>
+        </div>
+      </div>
+      <div class="game-container">
+        <div class="avatar-container">
+          <div class="avatar">
+            <img
+              src="https://assets.codepen.io/1480814/adam-argyle.png"
+              alt=""
+              id="player1"
+            />
+            <span></span>
+          </div>
+          <div class="avatar">
+            <img
+              src="https://assets.codepen.io/1480814/ahmed.png"
+              alt=""
+              id="player2"
+              s
+            />
+            <span></span>
+          </div>
+        </div>
+        <div class="game-board" id="board"></div>
+      </div>
+    </div>
+
+    <div class="modal result-modal">
+      <div class="modal_body">
+        <div class="message">Player 1 WON!</div>
+        <button class="reset_btn">Play Again</button>
+      </div>
+    </div>
+
+    <div class="modal username-modal">
+      <div class="modal_body">
+        <form id="nameForm">
+          <input
+            type="text"
+            id="player1Name"
+            name="player1Name"
+            placeholder="Player 1"
+            required
+          />
+
+          <br /><br />
+          <input
+            type="text"
+            id="player2Name"
+            name="player2Name"
+            placeholder="Player 2"
+            required
+          />
+
+          <br /><br />
+
+          <input type="submit" value="Start Game" />
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
