@@ -71,6 +71,8 @@ var reset = function (boxes) {
     turn = 0;
     turnCount = 0;
     setPlayers();
+    player1.style.animation = 'spin 10s linear infinite';
+    player2.style.animation = '';
 };
 var resultShow = function (content) {
     var message = document.getElementsByClassName('message')[0];

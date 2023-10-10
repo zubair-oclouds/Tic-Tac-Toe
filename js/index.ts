@@ -86,6 +86,8 @@ const reset = (boxes: HTMLCollectionOf<Element>) => {
   turn = 0;
   turnCount = 0;
   setPlayers();
+  player1.style.animation = 'spin 10s linear infinite';
+  player2.style.animation = '';
 }
 
 const resultShow = (content: string) => {
